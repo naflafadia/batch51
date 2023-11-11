@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Day 3</title>
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="nav">
+        <div class="container-nav">
+            <ul>
+                <li>
+                    <img src="./img/brandred.png">
+                </li>
+                <li class="nav-link">
+                    <a href="#">Home</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">My Project</a>
+                </li>
+            </ul>
+            <div class="btn-contact">
+                <a href="#">Contact me</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Content start -->
+    <div class="container-form">
+        <form class="form">
+            <h1>GET IN TOUCH</h1>
+            <label class="label-contact">Name</label>
+            <input type="text" class="input-contact" id="inputName">
+            <label  class="label-contact">Email</label>
+            <input type="text" class="input-contact" id="inputEmail">
+            <label  class="label-contact">Phone Number</label>
+            <input type="text" class="input-contact" id="inputPhone">
+            <label  class="label-contact">Subject</label>
+            <select class="input-contact" id="inputSubject">
+                <option></option>
+                <option>Frontend Developer</option>
+                <option>Backend Developer</option>
+                <option>Fullstack Developer</option>
+            </select>
+            <label  class="label-contact">Your Message</label>
+            <textarea class="input-contact" style="height: 100px;" id="inputMessage"></textarea>
+            <div class="btn-submit">
+                <input type="button" value="submit" class="submit-contact" onclick="submitData()">
+            </div>
+        </form>
+    </div>
+    <!-- Content end -->
+
+    <script src="contact.js"></script>
+</body>
+</html>
