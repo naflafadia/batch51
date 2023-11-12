@@ -4,8 +4,8 @@ console.log('test', dataBlog);
 
 function submitProject() {
     let inputProject = document.getElementById('inputProject').value;
-    let startDate = document.getElementById('startDate').value;
-    let endDate = document.getElementById('endDate').value;
+    let startDate = new Date(document.getElementById('startDate').value);
+    let endDate = new Date(document.getElementById('endDate').value);
     let desc = document.getElementById('desc').value;
 
     // icon checkbox
@@ -30,17 +30,16 @@ function submitProject() {
     console.log('data', iconsForCurrentCard);
 
     // Memeriksa apakah nilai input kosong
-    if (!inputProject) {
-        alert('Project Name harus diisi!');
-    } else if (!startDate) {
-        alert('Start Date harus diisi!');
-    } else if (!endDate) {
-        alert('End Date harus diisi!');
-    } else if (!desc) {
-        alert('Description harus diisi!');
-    } else {
-        alert('Project berhasil terkirim');
+    if(!inputProject || !startDate || !endDate || !desc) {
+        alert('Mohon diisi!');
+        return;
     }
+
+    // Hitung selisih dalam hari
+    const days = dayDifference(startDate, endDate);
+
+    // Menentukan unit durasi berdasarkan selisih waktu
+    const {duration, unit} = chooseDuration(days);
 
     let inputImage = document.getElementById('inputImage').files;
 
@@ -54,7 +53,9 @@ function submitProject() {
         startDate: startDate,
         endDate: endDate,
         desc: desc,
-        image: inputImage
+        image: inputImage,
+        duration: duration,
+        unit: unit
     };
 
     dataBlog.push(blog);
@@ -77,7 +78,7 @@ function renderBlog() {
         <img src="${dataBlog[i].image}" class="img-card">
         <div class="text-card">
             <a href="detail.html">${dataBlog[i].project}</a>
-            <h4>durasi : 3 bulan</h4>
+            <h4>durasi : ${dataBlog[i].duration} ${dataBlog[i].unit}</h4>
             <p>${dataBlog[i].desc}</p>
             <div class="checkbox" style="margin-top: 20px;">
                 <div id="icon">${iconsHTML}</div>
@@ -88,5 +89,24 @@ function renderBlog() {
             <button class="btn-card">delete</button>
         </div>
     </div>`;
+    }
+}
+
+function dayDifference (start, end) {
+    const timeDiff = end.getTime() - start.getTime();
+    return Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+}
+
+function chooseDuration(days) {
+    const years = Math.floor(days / 365);
+    const months = Math.floor((days % 365) / 30);
+    const remainingDays = days % 30;
+
+    if(years > 0) {
+        return { duration: years, unit: 'tahun' };
+    } else if (months > 0) {
+        return { duration: months, unit: 'bulan' };
+    } else  {
+        return { duration: remainingDays, unit: 'hari' };
     }
 }
