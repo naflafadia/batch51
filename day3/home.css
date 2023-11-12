@@ -29,7 +29,7 @@ body {
     cursor: pointer;
 }
 .nav-link {
-    font-size: 20px;
+    font-size: 15px;
     width: 90px;
 }
 .nav-link a {
@@ -38,7 +38,6 @@ body {
 }
 .nav-link a:hover {
     font-weight: bolder;
-    font-size: 15px;
 }
 .btn-nav {
     background-color: #111727;
@@ -74,7 +73,7 @@ body {
     font-size: 25px; 
     margin-bottom: 20px;
 }
-.text h1 p {
+.detail {
     font-weight: 100; 
     font-size: small; 
     text-align: justify;
