@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Inclusive+Sans&family=Inter:wght@200;400;600;900&family=Kanit:wght@300&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Project Day 2</title>
+    <title>Personal Web</title>
 </head>
 <body>
     <!-- Navbar start -->
@@ -12,23 +16,30 @@
         <div class="container-nav">
             <ul>
                 <li>
-                    <a href="https://dumbways.id/"><img src="./img/brandred.png"></a>
+                    <img src="./img/brandred.png">
                 </li>
-                <li class="nav-link">
+                <li class="nav-link nav-collapse">
                     <a href="index.html">Home</a>
                 </li>
-                <li class="nav-link">
+                <li class="nav-link nav-collapse">
                     <a href="project.html">My Project</a>
                 </li>
             </ul>
             <div class="btn-contact">
-                <a href="contact.html" class="btn-nav">Contact me</a>
+                <a href="contact.html" class="nav-collapse">Contact Me</a>
+                <i data-feather="menu" class="hamburger-menu" id="hamburger"></i>
             </div>
         </div>
     </nav>
+    <div class="container-hamburger-menu" id="listNav">
+        <a href="index.html" class="click">Home</a>
+        <a href="project.html">My Project</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
     <!-- Navbar end -->
 
     <!-- Content start -->
+<div class="container-main">
    <article class="article">
     <div class="text">
         <h1>Welcome to My Personal Website</h1>
@@ -51,6 +62,13 @@
         <h3>Fullstack Developer</h3>
     </div>
    </article>
+</div>
     <!-- Content end -->
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
