@@ -183,10 +183,10 @@ body {
 
     /* Content */
     .container-main {
-        width: 100%;
+        max-width: 100%;
     }
     .article {
-        max-width: max-content;
+        max-width: 80%;
         flex-direction: column;
     }
     .text {
@@ -211,13 +211,16 @@ body {
         margin-right: 20px;
     }
     .logo {
-        gap: 10px   ;
+        gap: 10px;
+        justify-content: center;
     }
     .logo-icon {
         width: 20px;
     }
     .card {
         max-width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .container-card {
         max-width: 50%;
