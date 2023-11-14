@@ -213,6 +213,9 @@ body {
     font-size: 12px; 
     text-align: justify;
 }
+.checkbox {
+    margin-top: 20px;
+}
 #icon {
     display: flex;
     gap: 10px;
@@ -299,6 +302,13 @@ body {
     }
     .text-card p {
         font-size: 10px;
+        margin-top: 5px;
+    }
+    .btn-group {
+        margin-top: 0;
+    }
+    .checkbox {
+        margin-top: 5px;
     }
     #icon {
         gap: 5px;
