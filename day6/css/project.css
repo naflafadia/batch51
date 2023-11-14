@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #e2e6ea;
+    font-family: Poppins;
+}
+
+/* Navbar */
+.nav {
+    background-color: #f4f3f3;
+    padding: 1.4rem 7%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.container-nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.container-nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 50px;
+}
+.container-nav  ul li img {
+    height: 50px;
+    cursor: pointer;
+}
+.nav-link {
+    font-size: 15px;
+    width: 90px;
+}
+.nav-link a {
+    text-decoration: none;
+    color: black;
+}
+.nav-link a:hover {
+    font-weight: bolder;
+}
+.btn-contact {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.btn-contact a {
+    text-decoration: none; 
+    background-color: #111727; 
+    padding: 10px; 
+    color: #fff;
+    border-radius: 10px; 
+    font-size: 15px; 
+    text-align: center;
+}
+.hamburger-menu {
+    cursor: pointer;
+    display: none;
+}
+.container-hamburger-menu  {
+    display: none;
+}
+.container-hamburger-menu a {
+    background-color: #111727;
+    color: #fff;
+    text-decoration: none;
+    border: 2px #fff solid;
+    text-align: center;
+    padding: 10px;
+}
+.container-hamburger-menu a:hover {
+    background-color: #f4f3f3;
+    color: #111727;
+    border: 1px #111727 solid;
+}
+.container-hamburger-menu .click {
+    background-color: #f4f3f3;
+    color: #111727;
+    border: 1px #111727 solid;
+}
+
+/* Form */
+.container-project {
+    display: flex; 
+    justify-content: center; 
+    margin: 50px auto;
+}
+.form-project {
+    display: flex; 
+    flex-direction: column; 
+    width: 350px; 
+    gap: 10px; 
+    justify-content: space-between;
+}
+.form-project h1 {
+    text-align: center; 
+    margin-bottom: 10px; 
+    font-size: 30px;
+}
+.label-project {
+    font-weight: bold;
+    font-size: 15px;
+}
+.input-project {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.container-date {
+    display: flex; 
+    gap: 20px;
+}
+.container-startdate {
+    display: flex; 
+    flex-direction: column; 
+    flex: 50%;
+}
+.container-enddate {
+    display: flex; 
+    flex-direction: column; 
+    flex: 50%;
+}
+.textarea {
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.label-upload {
+    font-weight: bold;
+    font-size: 15px;
+}
+.upload {
+    margin-top: 10px;
+}
+.input-image-group {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.input-image-group label h6 {
+    font-weight: 200;
+    font-size: 15px;
+    border: none;
+    background-color: #c4c4c4;
+    border-radius: 8px;
+    padding: 5px 15px;
+}
+.input-image-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.submit-project {
+    background-color: #111727;
+    color: #fff;
+    padding: 5px;
+    width: 100px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+.kotak {
+    box-shadow:0px 5px 5px rgba(0, 0, 0, 0.2) ;
+}
+
+/* Card */
+.myproject {
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 30px;
+}
+.blog-list {
+    margin-top: 30px; 
+    display: flex; 
+    margin-bottom: 50px; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+.container-card {
+    width: 350px; 
+    background-color: #F5F7F8; 
+    border-radius: 20px; 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); margin: 10px;
+}
+.img-card {
+    width: 100%; 
+    border-radius: 10px;
+}
+.text-card {
+    padding: 0 20px;
+}
+.text-card a {
+    text-decoration: none;
+    font-size: 15px; 
+    font-weight: 550;
+}
+.text-card h4 {
+    font-size: x-small;
+    font-weight: 400;
+}
+.text-card p {
+    margin-top: 20px; 
+    font-size: 12px; 
+    text-align: justify;
+}
+.checkbox {
+    margin-top: 20px;
+}
+#icon {
+    display: flex;
+    gap: 10px;
+}
+#icon img {
+    width: 20px;
+}
+.btn-group {
+    margin-top: 30px; 
+    padding: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    gap: 10px;
+}
+.btn-card {
+    padding: 10px; 
+    width: 170px; 
+    background-color: #111727; 
+    color: #fff; 
+    font-size: large; 
+    border-radius: 15px; 
+    height: 40px; 
+    cursor: pointer;
+}
+
+/* Media Queries */
+/* Laptop */
+@media only screen and  (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    /* Navbar */
+    .nav-collapse {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .container-hamburger-menu.active {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Form Project */
+    .container-project {
+        width: 100%;
+    }
+    .form-project {
+        width: 60%;
+    }
+    .form-project h1 {
+        font-size: 25px;
+    }
+    .label-project {
+        font-size: 10px;
+    }
+    .label-upload {
+        font-size: 10px;
+    }
+
+    /* Card */
+    .myproject {
+        font-size: 20px;
+    }
+    .container-card {
+        width: 180px;
+    }
+    .card {
+        width: 100%;
+    }
+    .text-card a  {
+        font-size: 10px;
+    }
+    .text-card h4 {
+        font-size: 8px;
+    }
+    .text-card p {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .btn-group {
+        margin-top: 0;
+    }
+    .checkbox {
+        margin-top: 5px;
+    }
+    #icon {
+        gap: 5px;
+    }
+    #icon img {
+        width: 20px;
+    }
+    .btn-card {
+        width: 80px;
+        font-size: small;
+    }
+}
+
+/* Mobile Phone */
+@media only screen and  (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
