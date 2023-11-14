@@ -216,11 +216,14 @@ body {
     .logo-icon {
         width: 20px;
     }
+    .card {
+        max-width: 100%;
+    }
     .container-card {
-        height: 100%;
+        max-width: 50%;
     }
     .container-card img {
-        width: 150px;
+        max-width: 90%;
     }
     .container-card h1 {
         font-size: small;
