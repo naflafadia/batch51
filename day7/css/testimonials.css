@@ -196,6 +196,16 @@ h3 {
     .btn-rate {
         display: flex;
         align-items: center;
+        gap: 2px;
+    }
+    .container-card {
+        width: 163px;
+    }
+    .card {
+        padding: 5px;
+    }
+    .container-rate {
+        gap: 10px   ;
     }
 }
 

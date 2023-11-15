@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Inclusive+Sans&family=Inter:wght@200;400;600;900&family=Kanit:wght@300&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/testimonials.css">
     <title>Personal Web</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
                     <a href="project.html">My Project</a>
                 </li>
                 <li class="nav-link nav-collapse">
-                    <a href="testimonials.html">Testimonials</a>
+                    <a href="project.html">Testimonials</a>
                 </li>
             </ul>
             <div class="btn-contact">
@@ -37,41 +37,33 @@
     <div class="container-hamburger-menu" id="listNav">
         <a href="index.html">Home</a>
         <a href="project.html">My Project</a>
-        <a href="contact.html" class="click">Contact Me</a>
-        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="testimonials.html" class="click">Testimonials</a>
     </div>
     <!-- Navbar end -->
 
-    <!-- Content start -->
-    <div class="container-form">
-        <form class="form">
-            <h1>GET IN TOUCH</h1>
-            <label class="label-contact">Name</label>
-            <input type="text" class="input-contact" id="inputName">
-            <label  class="label-contact">Email</label>
-            <input type="text" class="input-contact" id="inputEmail">
-            <label  class="label-contact">Phone Number</label>
-            <input type="text" class="input-contact" id="inputPhone">
-            <label  class="label-contact">Subject</label>
-            <select class="input-contact" id="inputSubject">
-                <option></option>
-                <option>Frontend Developer</option>
-                <option>Backend Developer</option>
-                <option>Fullstack Developer</option>
-            </select>
-            <label  class="label-contact">Your Message</label>
-            <textarea class="input-contact" style="height: 100px;" id="inputMessage"></textarea>
-            <div class="btn-submit">
-                <input type="button" value="submit" class="submit-contact" onclick="submitData()">
-            </div>
-        </form>
-    </div>
-    <!-- Content end -->
+    <!-- Testimonials start -->
+    <h1>My Testimonials</h1>
+    <h3>Rating By Star</h3>
+<div class="container-main">
+<div class="container-rate">
+    <button class="btn-all">All</button>
+    <button class="btn-rate">1 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-rate">2 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-rate">3 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-rate">4 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-rate">5 <img src="./img/star (1).png" class="rate"></button>
+</div>
+<div class="container-testimonials" id="testimonials">
+    <!-- Konten Static -->
+    
+</div>
+<!-- Testimonials end -->
 
     <!-- Feather Icons -->
-        <script>
-            feather.replace();
-        </script>
-    <script src="./js/contact.js"></script>
+    <script>
+        feather.replace();
+    </script>
+    <script src="./js/testimonials.js"></script>
 </body>
 </html>
