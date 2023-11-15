@@ -149,9 +149,6 @@ h3 {
 .content-card h2 {
     font-size: 15px;
 }
-.content-card h4 {
-    font-weight: 400;
-}
 .card-rate {
     display: flex; 
     align-items: center; 
