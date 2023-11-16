@@ -18,14 +18,14 @@
                 <li>
                     <img src="./img/brandred.png">
                 </li>
-                <li class="nav-link nav-collapse">
+                <li class="nav-link nav-collapse home">
                     <a href="index.html">Home</a>
                 </li>
-                <li class="nav-link nav-collapse">
+                <li class="nav-link nav-collapse project">
                     <a href="project.html">My Project</a>
                 </li>
                 <li class="nav-link nav-collapse">
-                    <a href="project.html">Testimonials</a>
+                    <a href="testimonials.html">Testimonials</a>
                 </li>
             </ul>
             <div class="btn-contact">
@@ -47,12 +47,12 @@
     <h3>Rating By Star</h3>
 <div class="container-main">
 <div class="container-rate">
-    <button class="btn-all">All</button>
-    <button class="btn-rate">1 <img src="./img/star (1).png" class="rate"></button>
-    <button class="btn-rate">2 <img src="./img/star (1).png" class="rate"></button>
-    <button class="btn-rate">3 <img src="./img/star (1).png" class="rate"></button>
-    <button class="btn-rate">4 <img src="./img/star (1).png" class="rate"></button>
-    <button class="btn-rate">5 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-all" onclick="allTestimonials()">All</button>
+    <button class="btn-rate" onclick="filterTestimonials(1)">1 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-rate" onclick="filterTestimonials(2)">2 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-rate" onclick="filterTestimonials(3)">3 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-rate" onclick="filterTestimonials(4)">4 <img src="./img/star (1).png" class="rate"></button>
+    <button class="btn-rate" onclick="filterTestimonials(5)">5 <img src="./img/star (1).png" class="rate"></button>
 </div>
 <div class="container-testimonials" id="testimonials">
     <!-- Konten Static -->

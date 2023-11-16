@@ -26,7 +26,12 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 50px;
+}
+.home {
+    margin-left: 30px;
+}
+.project {
+    margin-right: 30px;
 }
 .container-nav  ul li img {
     height: 50px;
@@ -103,16 +108,19 @@ h3 {
     display: flex; 
     justify-content: center; 
     gap: 20px;
+    flex-wrap: wrap;
 }
 .btn-all {
     padding: 7px; 
     width: 50px; 
     font-size: 15px; 
     text-align: center;
+    cursor: pointer;
 }
 .btn-rate {
     font-size: 15px; 
     padding: 7px; 
+    cursor: pointer;
 }
 .rate {
     width: 13px;
