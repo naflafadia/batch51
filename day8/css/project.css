@@ -104,7 +104,8 @@ body {
 .form-project h1 {
     text-align: center; 
     margin-bottom: 10px; 
-    font-size: 30px;
+    font-size: 25px; 
+    font-weight: 550;
 }
 .label-project {
     font-weight: bold;
@@ -182,7 +183,8 @@ body {
 .myproject {
     text-align: center; 
     margin-top: 20px; 
-    font-size: 30px;
+    font-size: 25px; 
+    font-weight: 550;
 }
 .blog-list {
     margin-top: 30px; 
@@ -334,5 +336,11 @@ body {
 @media only screen and  (max-width: 450px) {
     html {
         font-size: 55%;
+    }
+    #startDate {
+        width: 80px;
+    }
+    #endDate {
+        width: 80px;
     }
 }

@@ -101,7 +101,8 @@ body {
     gap: 10px;
 }
 .form h1 {
-    font-weight: bolder; 
+    font-size: 25px; 
+    font-weight: 550; 
     text-align: center;
 }
 .label-contact {
