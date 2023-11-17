@@ -98,8 +98,9 @@ body {
 }
 .form-project h1 {
     text-align: center; 
-    margin-bottom: 10px; 
-    font-size: 30px;
+    margin-bottom: 20px; 
+    font-size: 20px; 
+    font-weight: 550;
 }
 .label-project {
     font-weight: bold;
@@ -130,6 +131,7 @@ body {
     height: 100px;
     border-radius: 5px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border: none;
 }
 .label-upload {
     font-weight: bold;
@@ -177,7 +179,8 @@ body {
 .myproject {
     text-align: center; 
     margin-top: 20px; 
-    font-size: 30px;
+    font-size: 20px; 
+    font-weight: 550;
 }
 .blog-list {
     margin-top: 30px; 
@@ -275,7 +278,7 @@ body {
         width: 60%;
     }
     .form-project h1 {
-        font-size: 25px;
+        font-size: 15px;
     }
     .label-project {
         font-size: 10px;
@@ -286,7 +289,7 @@ body {
 
     /* Card */
     .myproject {
-        font-size: 20px;
+        font-size: 15px;
     }
     .container-card {
         width: 180px;
@@ -323,6 +326,7 @@ body {
     .container-card {
         width: 150px;
     }
+    
 }
 
 /* Mobile Phone */
@@ -330,4 +334,11 @@ body {
     html {
         font-size: 55%;
     }
+    #startDate {
+        width: 80px;
+    }
+    #endDate {
+        width: 80px;
+    }
+
 }
