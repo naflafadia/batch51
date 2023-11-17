@@ -103,8 +103,8 @@ body {
 }
 .form-project h1 {
     text-align: center; 
-    margin-bottom: 10px; 
-    font-size: 25px; 
+    margin-bottom: 20px; 
+    font-size: 20px; 
     font-weight: 550;
 }
 .label-project {
@@ -184,7 +184,7 @@ body {
 .myproject {
     text-align: center; 
     margin-top: 20px; 
-    font-size: 25px; 
+    font-size: 20px; 
     font-weight: 550;
 }
 .blog-list {

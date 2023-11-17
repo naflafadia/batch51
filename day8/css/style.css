@@ -93,7 +93,7 @@ body {
     width: 100%;
 }
 .article {
-    width: 800px; 
+    width: 700px; 
     background-color: #fefefe; 
     margin: 50px auto; 
     padding: 50px; 
@@ -106,13 +106,13 @@ body {
     margin: 10px;
 }
 .text h1 {
-    font-size: 25px; 
+    font-size: 20px; 
     font-weight: 550; 
     margin-bottom: 20px;
 }
 .detail {
     font-weight: 400; 
-    font-size: x-small; 
+    font-size: xx-small; 
     text-align: justify;
 }
 .container-cv {
@@ -132,6 +132,7 @@ body {
 }
 .container-cv h3 {
     font-weight: 400;
+    font-size: 10px;
 }
 .download-cv {
     width: 20px;
