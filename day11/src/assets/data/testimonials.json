@@ -1,0 +1,32 @@
+[
+    {
+    "rate": 5,
+    "image": "../assets/img/woman1.jpg",
+    "author": "Seraphina Blake",
+    "quotes": "Layanan pelanggan luar biasa! Respon cepat dan solusi yang memuaskan."
+    },
+    {
+    "rate": 4,
+    "image": "../assets/img/woman2.jpg",
+    "author": "Aria Steele",
+    "quotes": "Produk ini memenuhi harapan saya. Kualitasnya luar biasa, sangat direkomendasikan!"
+    },
+    {
+    "rate": 3,
+    "image": "../assets/img/woman3.jpg",
+    "author": "Zara Knight",
+    "quotes": "Pengalaman belanja online yang menyenangkan. Mudah, cepat, dan akurat."
+    },
+    {
+    "rate": 4,
+    "image": "../assets/img/woman4.jpg",
+    "author": "Luna Everhart",
+    "quotes": "Dukungan pelanggan luar biasa. Prosesnya lancar dan hasilnya memuaskan."
+    },
+    {
+    "rate": 5,
+    "image": "../assets/img/woman5.jpg",
+    "author": "Jocelyn Phoenix",
+    "quotes": "Produk revolusioner! Mempermudah pekerjaan dan sangat efisien."
+    }
+]
