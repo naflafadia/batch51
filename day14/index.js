@@ -144,9 +144,8 @@ async function detail(req, res) {
     const query = `SELECT * FROM projects WHERE id=${id}`
     const obj = await sequelize.query(query, { type: QueryTypes.SELECT })
 
-    // Format tanggal ke YYYY-MM-DD
-    const formattedStartDate = obj[0].start_date.toISOString().split('T')[0]
-    const formattedEndDate = obj[0].end_date.toISOString().split('T')[0]
+    const formattedStartDate = new Date(obj[0].start_date).toISOString().split('T')[0];
+    const formattedEndDate = new Date(obj[0].end_date).toISOString().split('T')[0];
 
     const days = dayDifference(new Date(obj[0].start_date), new Date(obj[0].end_date))
     const { duration, unit } = chooseDuration(days)

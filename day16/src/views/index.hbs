@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Inclusive+Sans&family=Inter:wght@200;400;600;900&family=Kanit:wght@300&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-5" href="/"><img src="/assets/img/brandred.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active ms-5 fs-5" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active ms-5 fs-5" href="/add-project">Add Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active ms-5 fs-5" href="/testimonials">Testimonials</a>
+              </li>
+            </ul>
+            {{#if isLogin}}
+            <p class="text-primary navbar-nav nav-link regislog fs-5">Welcome, {{user.name}} !</p>
+            {{else}}
+            <ul class="navbar-nav">
+                <div class="regislog">
+              <li class="nav-item">
+                <a class="nav-link active ms-5 fs-5" href="/register">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active ms-5 fs-5" href="/login">Login</a>
+              </li>
+              </div>
+            </ul>
+            {{/if}}
+              <a href="/contact"><button class="btn btn-outline-success me-5 text-white btn fs-5" type="submit">Contact Me</button></a>
+          </div>
+        </div>
+      </nav>
+    <!-- Navbar End -->
+
+    {{#if messages.success}}
+    <div class="alert alert-success" role="alert">
+      <div class="mr-5">
+        {{messages.success}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{#if isLogin}}
+    <form action="/logout" method="post" class="d-flex justify-content-end mx-5">
+    <button type="submit" class="btn-outline-primary p-2 mt-4 text-center">Logout</button>
+    </form>
+    {{/if}}
+
+    <!-- Content Start -->
+    <div class="container text-center container-fluid content mx-auto mb-5 mt-5 rounded-2">
+      <div class="row">
+        <div class="col-lg-6 p-5">
+        <div class="container-text p-5">
+          <h1 class="fs-3 fw-bold mb-3">Welcome to My Personal Website</h1>
+          <p class="fw-light">I am a 22-year-old woman born on February 26, 2001, in Purwokerto. I have a deep passion for learning and constantly strive to expand my horizons. One of my greatest interests is coding, as I aspire to become a full-stack web developer. I am driven, persistent, and always eager to tackle new challenges. Exploring the world of technology and creating innovative web solutions is both my career goal and a source of personal fulfillment. With a curious and determined mindset, I'm committed to honing my skills and contributing to the ever-evolving digital landscape.</p>
+          <div class="d-flex gap-3 text-center">
+            <button type="button" class="btn text-white">Contact</button>
+            <h3 class="fs-6">download CV</h3>
+            <img src="/assets/icons/download.png" class="download-cv">
+          </div>
+          <div class="d-flex gap-3 mt-4 icon">
+            <a href="https://www.facebook.com/nafla.fadia.1"><img src="/assets/img/facebook.png"></a>
+            <a href="https://www.instagram.com/naflafadia/?hl=en"><img src="/assets/img/instagram.png"></a>
+            <a href="https://id.linkedin.com/in/nafla-fadia-6444aa200"><img src="/assets/img/linkedin.png"></a>
+            <a href="https://twitter.com/naflafadiaa"><img src="/assets/img/twitter.png"></a>
+          </div>
+        </div>
+        </div>
+        <div class="col col-lg-6 mt-5">
+          <div class="card-name mt-5 rounded-1">
+            <img src="/assets/img/profile.png" class="card-img-top img-card">
+            <div class="card-body">
+              <h5 class="card-title">Nafla Fadia</h5>
+              <p class="card-text">Fullstack Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Content End -->
+
+    <!-- Card Start -->
+    <hr class="mt-5" style="border: 2px solid black;">
+    <h1 class="text-center fs-3 mb-4">MY PROJECT</h1>
+    <div class="d-flex justify-content-center mb-5">
+      <a href="/add-project"><button type="button" class="btn btn-dark">Add New Project</button></a>
+    </div>
+    <div id="contents" class="d-flex flex-wrap justify-content-center mb-3 gap-3">
+      {{#each data}}
+      <div class="card mb-5 rounded-4">
+        <img src="/uploads/{{this.image}}" class="card-img-top rounded-2">
+        <div class="card-body">
+          <a href="/detail/{{this.id}}" class="text-decoration-none"><h3 class="card-title text-primary-emphasis fw-bold fs-4">{{this.name}}</h3></a>
+          <h6 class="fs-6">durasi : {{duration}} {{unit}}</h6>
+          <p class="card-text fs-5 mt-5">{{this.description}}</p>
+          <div class="mb-5 mt-4">
+            <div class="d-flex gap-2" id="icon">
+              {{#if this.icons.nodeJs}}
+                <img src="{{this.icons.nodeJs}}">
+              {{/if}}
+
+              {{#if this.icons.nextJs}}
+                <img src="{{this.icons.nextJs}}">
+              {{/if}}
+
+              {{#if this.icons.reactJs}}
+                <img src="{{this.icons.reactJs}}">
+              {{/if}}
+
+              {{#if this.icons.typeScript}}
+                <img src="{{this.icons.typeScript}}">
+              {{/if}}
+              </div>
+          </div>
+          <div class="d-flex gap-3">
+          <form class="btn-card">
+          <a href="/update-project/{{this.id}}" class="btn btn-primary btn-card">edit</a>
+          </form>
+          <form class="btn-card" method="post" action="/delete-card/{{this.id}}">
+          <button class="btn btn-primary btn-card">delete</button>
+          </form>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <!-- Card End -->
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

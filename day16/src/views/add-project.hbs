@@ -49,7 +49,7 @@
         </div>
       </nav>
     <!-- Navbar End -->
-
+    
     {{#if isLogin}}
     <form action="/logout" method="post" class="d-flex justify-content-end mx-5">
     <button type="submit" class="btn-outline-primary p-2 mt-4 text-center">Logout</button>
@@ -57,26 +57,25 @@
     {{/if}}
 
     <!-- Form Start -->
-    <h1 class="text-center fs-3">UPDATE MY PROJECT</h1>
-    <form class="container form" method="post" action="/update-project">
-    <input type="hidden" name="id" value="{{data.id}}">
+    <h1 class="text-center fs-3">ADD MY PROJECT</h1>
+    <form class="container form" method="post" action="/add-project" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="inputProject" class="form-label mb-2">Project Name</label>
-          <input type="text" class="form-control" id="inputProject" name="name" value="{{data.name}}">
+          <input type="text" class="form-control" id="inputProject" name="name">
         </div>
         <div class="mb-3 d-flex gap-3">
             <div class="container-startdate">
                 <label for="startDate" class="form-label">Start Date</label>
-                <input type="date" class="form-control" id="startDate" name="start" value="{{data.start}}">
+                <input type="date" class="form-control" id="startDate" name="start">
             </div>
             <div class="container-enddate">
                 <label for="endDate" class="form-label">End Date</label>
-                <input type="date" class="form-control" id="endDate" name="end" value="{{data.end}}">
+                <input type="date" class="form-control" id="endDate" name="end">
             </div>
         </div>
         <div class="mb-3">
             <label for="desc" class="mb-2">Description</label>
-            <textarea class="form-control textarea" id="desc" name="description">{{data.description}}</textarea>
+            <textarea class="form-control textarea" id="desc" name="description"></textarea>
         </div>
         <label for="checkbox">Technologies</label>
         <div class="mb-3 mt-3">
@@ -85,7 +84,6 @@
                 <input type="checkbox" class="form-check-input" id="nodeJs" name="nodeJs" data-icon="nodeJs">
                 <label for="nodeJs" class="form-label" >Node Js</label>
             </div>
-
             <div class="d-flex gap-1">
                 <input type="checkbox" class="form-check-input" id="nextJs" name="nextJs" data-icon="nextJs">
                 <label for="nextJs" class="form-label">Next Js</label>
@@ -104,7 +102,7 @@
         </div>
         <div class="mb-3">
             <label for="inputImage" class="form-label">Upload Image</label>
-            <input type="file" class="form-control" id="inputImage">
+            <input type="file" class="form-control" id="inputImage" name="image">
         </div>
         <div class="d-flex justify-content-end mt-3 mb-5">
             <button type="submit" class="btn text-white">Submit</button>
