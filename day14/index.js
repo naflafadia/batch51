@@ -54,7 +54,7 @@ async function home(req, res) {
         };
     });
 
-    console.log('projectsWithInfo:', projectsWithInfo); // Tambahkan baris ini
+    console.log('projectsWithInfo:', projectsWithInfo);
 
     res.render('index', { data: projectsWithInfo });
 }
