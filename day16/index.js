@@ -58,7 +58,6 @@ app.post('/register', register)
 app.get('/login', loginView)
 app.post('/login', login)
 
-const data = []
 
 // Function to render home page
 async function home(req, res) {
@@ -82,7 +81,7 @@ async function home(req, res) {
             ...project,
             technologies: project.technologies.join(', '),
             duration,
-            unit,
+            unit, 
             icons
         }
     })
