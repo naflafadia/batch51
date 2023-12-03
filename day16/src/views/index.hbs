@@ -58,6 +58,14 @@
     </div>
     {{/if}}
 
+  {{#if messages.danger}}
+  <div class="alert alert-danger" role="alert">
+      <div class="mr-5">
+          {{messages.danger}}
+      </div>
+  </div>
+  {{/if}}
+
     {{#if isLogin}}
     <form action="/logout" method="post" class="d-flex justify-content-end mx-5">
     <button type="submit" class="btn-outline-primary p-2 mt-4 text-center">Logout</button>
@@ -108,7 +116,8 @@
       <div class="card mb-5 rounded-4">
         <img src="/uploads/{{this.image}}" class="card-img-top rounded-2">
         <div class="card-body">
-          <a href="/detail/{{this.id}}" class="text-decoration-none"><h3 class="card-title text-primary-emphasis fw-bold fs-4">{{this.name}} ~ {{this.author}}</h3></a>
+          <a href="/detail/{{this.id}}" class="text-decoration-none"><h3 class="card-title text-primary-emphasis fw-bold fs-4">{{this.name}}</h3></a>
+          <p>~ {{this.author}}</p>
           <h6 class="fs-6">durasi : {{duration}} {{unit}}</h6>
           <p class="card-text fs-5 mt-5">{{this.description}}</p>
           <div class="mb-5 mt-4">
