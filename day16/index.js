@@ -110,7 +110,7 @@ function addProjectView(req, res) {
 
 // Function to handle project addition
 async function addProject(req, res) {
-    const { name, start, end, description, id } = req.body
+    const { name, start, end, description } = req.body
     const checkboxes = ['nodeJs', 'nextJs', 'reactJs', 'typeScript'].filter(checkbox => req.body[checkbox])
 
     const image = req.file.filename
